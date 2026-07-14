@@ -7,8 +7,9 @@ Calls the FastAPI backend's /analyze endpoint and displays results.
 import streamlit as st
 import requests
 import pandas as pd
+import os
 
-API_URL = "http://localhost:8000"
+API_URL = os.getenv("API_URL", "http://localhost:8000")
 
 st.set_page_config(page_title="RepoPulse", page_icon="📊", layout="wide")
 
